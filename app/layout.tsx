@@ -14,8 +14,8 @@ export const metadata: Metadata = {
 		title: "davidemarcoli.dev",
 		description:
 			"Software engineer at SIX",
-		url: "https://davidemarcoli.dev\"",
-		siteName: "davidemarcoli.dev\"",
+		url: "https://davidemarcoli.dev",
+		siteName: "davidemarcoli.dev",
 		images: [
 			{
 				url: "https://davidemarcoli.dev/og.png",
