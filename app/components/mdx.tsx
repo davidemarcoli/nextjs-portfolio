@@ -69,6 +69,7 @@ const components = {
 				className,
 			)}
 			{...props}
+			target={props.href.startsWith("http") ? "_blank" : undefined}
 		/>
 	),
 	p: ({ className, ...props }) => (
