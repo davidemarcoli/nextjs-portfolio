@@ -9,7 +9,7 @@ const socials = [
 	// 	icon: <Twitter size={20} />,
 	// 	href: "https://twitter.com/davidemarcoli",
 	// 	label: "Twitter",
-	// 	handle: "@chronark_",
+	// 	handle: "@davidemarcoli",
 	// },
 	{
 		icon: <Mail size={20} />,
