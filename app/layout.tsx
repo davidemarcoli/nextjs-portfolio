@@ -3,22 +3,22 @@ import { Inter } from "next/font/google";
 import LocalFont from "next/font/local";
 import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
+import Head from "next/head";
 
 export const metadata: Metadata = {
+	metadataBase: new URL("https://davidemarcoli.de"),
 	title: {
-		default: "davidemarcoli.dev",
-		template: "%s | davidemarcoli.dev",
+		default: "Davide Marcoli",
+		template: "%s | Davide Marcoli",
 	},
 	description: "Software engineer at SIX",
 	openGraph: {
-		title: "davidemarcoli.dev",
-		description:
-			"Software engineer at SIX",
-		url: "https://davidemarcoli.dev",
-		siteName: "davidemarcoli.dev",
+		title: "Davide Marcoli",
+		description: "Davide Marcoli is a software engineer at SIX",
+		siteName: "Davide Marcoli",
 		images: [
 			{
-				url: "https://davidemarcoli.dev/og.png",
+				url: `/og.png`,
 				width: 1920,
 				height: 1080,
 			},
@@ -62,9 +62,9 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
-			<head>
+			<Head>
 				<Analytics />
-			</head>
+			</Head>
 			<body
 				className={`bg-black ${
 					process.env.NODE_ENV === "development" ? "debug-screens" : undefined
