@@ -1,4 +1,11 @@
 import { withContentlayer } from "next-contentlayer";
+import nextPwa from "next-pwa";
+
+const withPWA = nextPwa({
+    dest: "public",
+    register: true,
+    skipWaiting: true,
+});
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -6,7 +13,8 @@ const nextConfig = {
 	experimental: {
 		appDir: true,
 		mdxRs: true,
+		newNextLinkBehavior: true
 	},
 };
 
-export default withContentlayer(nextConfig);
+export default withPWA(withContentlayer(nextConfig));

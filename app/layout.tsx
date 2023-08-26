@@ -9,13 +9,13 @@ export const metadata: Metadata = {
 	metadataBase: new URL("https://davidemarcoli.de"),
 	title: {
 		default: "Davide Marcoli",
-		template: "%s | Davide Marcoli",
+		template: "%s | Davide Marcoli's Portfolio",
 	},
 	description: "Software engineer at SIX",
 	openGraph: {
-		title: "Davide Marcoli",
+		title: "Davide Marcoli's Portfolio",
 		description: "Davide Marcoli is a software engineer at SIX",
-		siteName: "Davide Marcoli",
+		siteName: "Davide Marcoli's Portfolio",
 		images: [
 			{
 				url: `/og.png`,
@@ -62,9 +62,12 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
-			<Head>
+			<head>
 				<Analytics />
-			</Head>
+				<link rel="manifest" href="/manifest.webmanifest" />
+				<link rel="apple-touch-icon" href="/icon-192x192.png" />
+				<meta name="theme-color" content="#042940" />
+			</head>
 			<body
 				className={`bg-black ${
 					process.env.NODE_ENV === "development" ? "debug-screens" : undefined
