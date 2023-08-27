@@ -2,23 +2,24 @@ import "../global.css";
 import { Inter } from "next/font/google";
 import LocalFont from "next/font/local";
 import { Metadata } from "next";
-import { Analytics } from "./components/analytics";
+import { BeamAnalytics } from "./components/beam-analytics";
+import Head from "next/head";
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
+	metadataBase: new URL("https://davidemarcoli.de"),
 	title: {
-		default: "davidemarcoli.dev",
-		template: "%s | davidemarcoli.dev",
+		default: "Davide Marcoli",
+		template: "%s | Davide Marcoli's Portfolio",
 	},
 	description: "Software engineer at SIX",
 	openGraph: {
-		title: "davidemarcoli.dev",
-		description:
-			"Software engineer at SIX",
-		url: "https://davidemarcoli.dev",
-		siteName: "davidemarcoli.dev",
+		title: "Davide Marcoli's Portfolio",
+		description: "Davide Marcoli is a software engineer at SIX",
+		siteName: "Davide Marcoli's Portfolio",
 		images: [
 			{
-				url: "https://davidemarcoli.dev/og.png",
+				url: `/og.png`,
 				width: 1920,
 				height: 1080,
 			},
@@ -44,6 +45,7 @@ export const metadata: Metadata = {
 	icons: {
 		shortcut: "/favicon.png",
 	},
+	keywords: ["davide", "marcoli", "davide marcoli", "software developer", "portfolio"]
 };
 const inter = Inter({
 	subsets: ["latin"],
@@ -62,15 +64,19 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
-			<head>
-				<Analytics />
-			</head>
+			<Head>
+				<BeamAnalytics />
+				<link rel="manifest" href="/manifest.webmanifest" />
+				<link rel="apple-touch-icon" href="/icon-192x192.png" />
+				<meta name="theme-color" content="#042940" />
+			</Head>
 			<body
 				className={`bg-black ${
 					process.env.NODE_ENV === "development" ? "debug-screens" : undefined
 				}`}
 			>
 				{children}
+				<Analytics/>
 			</body>
 		</html>
 	);
