@@ -44,6 +44,7 @@ export const metadata: Metadata = {
 	icons: {
 		shortcut: "/favicon.png",
 	},
+	keywords: ["davide", "marcoli", "davide marcoli", "software developer", "portfolio"]
 };
 const inter = Inter({
 	subsets: ["latin"],
@@ -62,12 +63,12 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
-			<head>
+			<Head>
 				<Analytics />
 				<link rel="manifest" href="/manifest.webmanifest" />
 				<link rel="apple-touch-icon" href="/icon-192x192.png" />
 				<meta name="theme-color" content="#042940" />
-			</head>
+			</Head>
 			<body
 				className={`bg-black ${
 					process.env.NODE_ENV === "development" ? "debug-screens" : undefined

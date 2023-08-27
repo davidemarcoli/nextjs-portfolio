@@ -1,5 +1,5 @@
 import { withContentlayer } from "next-contentlayer";
-import nextPwa from "next-pwa";
+import nextPwa from "@imbios/next-pwa";
 
 const withPWA = nextPwa({
     dest: "public",
