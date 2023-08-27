@@ -51,8 +51,7 @@ export default function Home() {
 						SIX
 					</Link>
 
-					<wbr />
-					and going to school at the{" "}
+					<wbr /> and going to school at the{" "}
 					<Link
 						target="_blank"
 						href="https://bms-zuerich.ch"
