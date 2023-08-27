@@ -2,7 +2,7 @@
 
 import Script from "next/script";
 
-export function Analytics() {
+export function BeamAnalytics() {
 	const token = process.env.NEXT_PUBLIC_BEAM_TOKEN;
 	if (!token) {
 		return null;
