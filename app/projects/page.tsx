@@ -9,8 +9,8 @@ import { Eye } from "lucide-react";
 export const revalidate = 60;
 export default async function ProjectsPage() {
 	const featured = allProjects.find((project) => project.slug === "davidemarcoli.dev")!;
-	const top2 = allProjects.find((project) => project.slug === "swissbanking-migration")!;
-	const top3 = allProjects.find((project) => project.slug === "intellij-file-finder")!;
+	const top2 = allProjects.find((project) => project.slug === "next-quiz")!;
+	const top3 = allProjects.find((project) => project.slug === "swissbanking-migration")!;
 	const sorted = allProjects
 		.filter((p) => p.published)
 		.filter(
