@@ -52,21 +52,13 @@ export default function Home() {
 					</Link>
 
 					<br />
-					and going to school at the{" "}
+					and studying computer science at the{" "}
 					<Link
 						target="_blank"
-						href="https://bms-zuerich.ch"
+						href="https://zhaw.ch"
 						className="underline duration-500 hover:text-zinc-300"
 					>
-						BMSZ
-					</Link>{" "}
-					and{" "}
-					<Link
-						target="_blank"
-						href="https://tbz.ch"
-						className="underline duration-500 hover:text-zinc-300"
-					>
-						TBZ
+						ZHAW
 					</Link>{" "}
 				</h2>
 			</div>
